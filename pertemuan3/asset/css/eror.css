@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&family=Montserrat:wght@700&family=Space+Mono:wght@400;700&display=swap");
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+:root {
+    --primary: #333333;
+    --secondary: #4f4f4f;
+    --footer-txt: #bdbdbd;
+    --font-header: "Inconsolata", monospace;
+    --font-text: "Space Mono", monospace;
+    --font-footer: "Montserrat", sans-serif;
+    --font-weight-bold: 700;
+    --font-weight-regular: 400;
+    --letter-spacing: -0.035em;
+}
+
+body{
+    background-color: #EEF1FF;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    border: none;
+    outline: none;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 3% 5%;
+    height: 5vh;
+    overflow: hidden;
+}
+
+.header__title {
+    font-family: var(--font-header);
+    font-weight: var(--font-weight-bold);
+    font-size: 2.5vh;
+}
+
+.content {
+    display: grid;
+    height: 90vh;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 5%;
+    padding: 2% 5%;
+    padding-left: 7%;
+}
+/* Button back */
+.content__wrapper--btn a{
+    background:#BFACE0;
+    color: #16213E;
+    font-size: 13px; 
+    border-radius:12px; 
+    opacity: 0.9;
+}
+.content__wrapper--btn a:hover{
+    color: whitesmoke;
+    background:#7882A4;
+}
+
+.content__wrapper--img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper__img {
+    width: 100%;
+}
+
+.content__wrapper--txt {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5vh;
+}
+
+.wrapper__txt--title {
+    width: 100%;
+}
+
+.txt__title {
+    color: var(--primary);
+    font-family: var(--font-text);
+    font-weight: var(--font-weight-bold);
+    font-size: 4.5vh;
+    letter-spacing: var(--letter-spacing);
+}
+
+.wrapper--txt-text {
+    width: 18rem;
+}
+
+.txt__text {
+    font-family: var(--font-text);
+    font-weight: var(--font-weight-regular);
+    font-size: 1.75vh;
+    color: var(--secondary);
+    letter-spacing: var(--letter-spacing);
+}
+
+.content__wrapper--btn {
+    display: flex;
+    width: 100%;
+    justify-content: start;
+}
+
+.btn {
+    background-color: var(--primary);
+    padding: 2vh 2.25rem;
+    color: white;
+    font-family: var(--font-text);
+    font-weight: var(--font-weight-bold);
+    font-size: 1.5vh;
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing);
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--footer-txt);
+    padding: 5% 0;
+    height: auto;
+}
+
+@media (min-width: 700px) {
+.header {
+    padding: 2% 4%;
+}
+
+.txt__title {
+    font-size: 4rem;
+}
+
+.wrapper--txt-text {
+    width: 16rem;
+}
+
+.footer {
+    padding: 1% 0;
+}
+}
